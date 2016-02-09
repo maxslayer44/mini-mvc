@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<routes>
+    <route name="index" path="/" controller="Default" action="index" />
+    <route name="autre" path="/une-autre-page.html" controller="Autre" action="autre" />
+    <route name="erreur" path="/erreur.html" controller="Non" action="non" />
+    <route name="article" path="/article-(.+)-(\d+).html" controller="Articles" action="index" vars="slug,id" />
+</routes>
