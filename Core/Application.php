@@ -3,7 +3,7 @@
 namespace Core;
 
 use Core\Router\Route;
-use core\Router\Router;
+use Core\Router\Router;
 
 /**
  * Class Application
