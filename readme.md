@@ -80,13 +80,17 @@ Les routes se situent pas défaut dans le fichier Config/routes.xml.
 
 La structure d'une route par défaut est de la forme :
 
-`<route name="maroute" path="/maroute" controller="MonControlleur" action="action" />`
+```xml
+<route name="maroute" path="/maroute" controller="MonControlleur" action="action" />
+```
 
 La route ci-dessus fera appel au Controller MonControlleurController et à la méthode action_action de ce dernier.
 
 Une route peut prendre des paramètres. Par exemple :
 
-`<route name="article" path="/article-(.+)-(\d+).html" controller="Articles" action="index" vars="slug,id" />`
+```xml
+<route name="article" path="/article-(.+)-(\d+).html" controller="Articles" action="index" vars="slug,id" />
+```
 
 La route ci-dessus possède un paramètre *slug* (première parenthèse) et un paramètre de type entier id (la seconde).
 Ces paramètres sont injectés dans la variable $_GET, ou sont accessible en ajoutant un paramètre à l'action de notre controlleur.
