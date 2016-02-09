@@ -23,7 +23,7 @@ Utilisation
 Les controlleurs créés doivent se situés dans le dossier **Controller**.
 Le squelette basic d'un controlleur a cette forme :
 
-```
+```php
 <?php
 
 namespace Controllers;
@@ -47,8 +47,9 @@ class MonController extends Controller
 Par défaut, le controlleur utilisera la vue **moncontrolleur/monaction** située dans le dossier **Views**.
 Pour transmettre une variable à une vue, on utilisera la directive suivante :
 
-```
-<?php// action du Controller
+```php
+<?php
+// action du Controller
 $this->view->assign("foo", "bar");
 ```
 
@@ -57,7 +58,7 @@ Pour utiliser cette variable, nous n'avons qu'à éffectuer `<?= $foo; ?>` dans 
 
 Pour modifier la vue par défaut d'un controlleur, nous pouvons utiliser la directive suivante :
 
-```
+```php
 <?php
 // action du Controller
 $this->view->setTemplate("autrevue");
@@ -66,7 +67,7 @@ $this->view->setTemplate("autrevue");
 La directive ci-dessus fera appel à la vue autrevue.php située dans le dossier **Views**.
 Si la vue est située dans un sous-dossier, on peut y accèder par le biais dans la constante **DS**
 
-```
+```php
 <?php
 // action du Controller
 $this->view->setTemplate("sous-repertoire" . DS . "mavue");
